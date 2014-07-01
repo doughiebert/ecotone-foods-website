@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    = stylesheet_link_tag 'application'
+  %body
+    .header
+    %img.headerlinksmap{:src => image_url('headerlinks80ppi.png'), :usemap => 'headerlinksmap'}
+    %map{:name => 'headerlinksmap'}
+      %area{shape: 'rect', coords: '0,0,125,31',   href: pages_url(:about_us), alt: 'About Us'}
+      %area{shape: 'rect', coords: '126,0,250,31', href: pages_url(:products), alt: 'Products'}
+      %area{shape: 'rect', coords: '251,0,413,31', href: pages_url(:whyinsects), alt: 'Why Insects'}
+      %area{shape: 'rect', coords: '414,0,528,31', href: pages_url(:connect), alt: 'Connect'}
+      %area{shape: 'rect', coords: '529,0,677,31', href: pages_url(:shop_online), alt: 'Shop Online'}
+    .content
+      = yield
+    .footerinfo
+    .footer
+      %ul.socialmedia
+        %li
+          %a.facebook{href: 'http://www.facebook.com/EcotoneFoods'}
+        %li
+          %a.twitter{href: 'http://www.twitter.com/EcotoneFoods'}
+        %li
+          %a.instagram{href: 'http://www.instagram.com/EcotoneFoods'}
+        %li
+          %a.pinterest{href: 'http://www.pinterest.com/EcotoneFoods'}
+        %li
+          %a.linkedin{href: 'http://www.linkedin.com/EcotoneFoods'}
+        %li
+          %a.youtube{href: 'http://www.youtube.com/EcotoneFoods'}
+        %li
+          %a.googleplus{href: 'http://www.googleplus.com/EcotoneFoods'}
+        %li
+          %a.tumblr{href: 'http://www.tumblr.com/EcotoneFoods'}
+        %li
+          %a.skype{href: 'http://www.skype.com/EcotoneFoods'}
+        %li
+          %a.vimeo{href: 'http://www.vimeo.com/EcotoneFoods'}
+      
+    

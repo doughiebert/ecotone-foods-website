@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url(http://fonts.googleapis.com/css?family=Exo+2:600,400);
+
+@mixin image-background($url) {
+  background-image: image_url($url);
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+html {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.header {
+  @include image-background('header80ppi.png');
+  height: 250px;
+}
+
+.headerlinksmap {
+  margin: 0 auto;
+  display: block;
+}
+
+.content {
+  width: 788px;
+  margin: 0 auto;
+  text-align:justify;
+}
+
+footerinfo {
+  @include image-background('footerinfo80ppi.png');
+  height: 31px;
+}
+
+$socialmedia-icon-size: 44px;
+$socialmedia-icon-spacing: 4px;
+
+ul.socialmedia {
+  list-style-type: none;
+  padding-right: 20px;
+  margin-top: 75px;
+  width: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 5 + 20;
+  height: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 2 + 20;
+  display: block;
+  float: right;
+}
+
+.socialmedia li, .socialmedia li a {
+  display: inline-block;
+  padding: $socialmedia-icon-spacing;  
+  height: $socialmedia-icon-size;
+  width: $socialmedia-icon-size;
+}
+.socialmedia li a {
+  
+  
+}
+
+.facebook { @include image-background('socialmediaicons/facebook80ppi.png') }
+.twitter { @include image-background('socialmediaicons/twitter80ppi.png') }
+.instagram { @include image-background('socialmediaicons/instagram80ppi.png') }
+.pinterest { @include image-background('socialmediaicons/pinterest80ppi.png') }
+.linkedin { @include image-background('socialmediaicons/linkedin80ppi.png') }
+.youtube { @include image-background('socialmediaicons/youtube80ppi.png') }
+.googleplus { @include image-background('socialmediaicons/googleplus80ppi.png') }
+.tumblr { @include image-background('socialmediaicons/tumblr80ppi.png') }
+.skype { @include image-background('socialmediaicons/skype80ppi.png') }
+.vimeo { @include image-background('socialmediaicons/vimeo80ppi.png') }
+
+.footer {
+  @include image-background('footerblank80ppi.png');
+  height: 248px;
+}
