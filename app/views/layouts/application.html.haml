@@ -6,11 +6,11 @@
     .header
     %img.headerlinksmap{:src => image_url('headerlinks80ppi.png'), :usemap => 'headerlinksmap'}
     %map{:name => 'headerlinksmap'}
-      %area{shape: 'rect', coords: '0,0,125,31',   href: pages_url(:about_us), alt: 'About Us'}
-      %area{shape: 'rect', coords: '126,0,250,31', href: pages_url(:products), alt: 'Products'}
-      %area{shape: 'rect', coords: '251,0,413,31', href: pages_url(:whyinsects), alt: 'Why Insects'}
-      %area{shape: 'rect', coords: '414,0,528,31', href: pages_url(:connect), alt: 'Connect'}
-      %area{shape: 'rect', coords: '529,0,677,31', href: pages_url(:shop_online), alt: 'Shop Online'}
+      %area{shape: 'rect', coords: '0,0,125,31',   href: cms_url('About Us'), alt: 'About Us'}
+      %area{shape: 'rect', coords: '126,0,250,31', href: cms_url('Products'), alt: 'Products'}
+      %area{shape: 'rect', coords: '251,0,413,31', href: cms_url('Why Insects'), alt: 'Why Insects'}
+      %area{shape: 'rect', coords: '414,0,528,31', href: cms_url('Connect'), alt: 'Connect'}
+      %area{shape: 'rect', coords: '529,0,677,31', href: cms_url('Shop Online'), alt: 'Shop Online'}
     .content
       = yield
     .footerinfo

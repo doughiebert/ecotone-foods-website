@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# also listed in .ruby-version because RVM is too dumb to read this?
+ruby "2.1.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -23,10 +25,16 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem "haml-rails"
-
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+# the gems that Doug installed
+gem "haml-rails"
+gem 'comfortable_mexican_sofa', '~> 1.12.0'
+
+# for Heroku deploys
+gem 'rails_12factor', group: :production
+gem 'pg', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
