@@ -3,7 +3,7 @@
   %head
     = stylesheet_link_tag 'application'
   %body
-    .header
+    %a.header{href: cms_index_url }
     %img.headerlinksmap{:src => image_url('headerlinks80ppi.png'), :usemap => 'headerlinksmap'}
     %map{:name => 'headerlinksmap'}
       %area{shape: 'rect', coords: '0,0,125,31',   href: cms_url('About Us'), alt: 'About Us'}

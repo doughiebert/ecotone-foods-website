@@ -27,7 +27,9 @@ html {
 
 .header {
   @include image-background('header80ppi.png');
+  display: block;
   height: 250px;
+  width: 100%;
 }
 
 .headerlinksmap {
