@@ -38,35 +38,44 @@ html {
 .content {
   width: 788px;
   margin: 0 auto;
-  text-align:justify;
+  text-align: justify;
 }
 
-footerinfo {
+.footerinfo {
   @include image-background('footerinfo80ppi.png');
   height: 31px;
+}
+
+.footer {
+  @include image-background('footerblank80ppi.png');
+  height: 248px;
+  width: 1102px;
+  margin: auto auto;
 }
 
 $socialmedia-icon-size: 44px;
 $socialmedia-icon-spacing: 4px;
 
-ul.socialmedia {
-  list-style-type: none;
-  padding-right: 20px;
-  margin-top: 75px;
-  width: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 5 + 20;
-  height: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 2 + 20;
-  display: block;
+.socialmedia {
   float: right;
+  margin-top: 50px;
+  margin-right: 40px;
 }
 
-.socialmedia li, .socialmedia li a {
+.socialmedia ul {
+  list-style-type: none;
+  width: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 5 + 20;
+  /*height: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 2 + 20;*/
+}
+
+.socialmedia li, .socialmedia a {
   display: inline-block;
   padding: $socialmedia-icon-spacing;  
   height: $socialmedia-icon-size;
   width: $socialmedia-icon-size;
 }
-.socialmedia li a {
-  
+
+.socialmedia a {
   
 }
 
@@ -81,7 +90,3 @@ ul.socialmedia {
 .skype { @include image-background('socialmediaicons/skype80ppi.png') }
 .vimeo { @include image-background('socialmediaicons/vimeo80ppi.png') }
 
-.footer {
-  @include image-background('footerblank80ppi.png');
-  height: 248px;
-}

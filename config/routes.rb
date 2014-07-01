@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'welcome#index'  
+  root 'welcome#index'  
 
   comfy_route :cms_admin, :path => '/admin'
 
