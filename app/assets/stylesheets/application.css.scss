@@ -49,7 +49,7 @@ html {
 }
 
 .footer {
-  @include image-background('footerblank80ppi.png');
+  @include image-background('footer280ppi.png');
   height: 248px;
   width: 1102px;
   margin: auto auto;
