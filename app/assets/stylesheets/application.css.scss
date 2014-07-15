@@ -49,11 +49,33 @@ html {
   height: 31px;
 }
 
+
+$footer-height: 248px;
+$footer-whitespace-height: 58px;
+
 .footer {
   @include image-background('footer280ppi.png');
-  height: 248px;
+  height: $footer-height;
   width: 1102px;
   margin: auto auto;
+}
+
+.extralinks {
+  width: 420px;
+  float: right;
+  height: $footer-height - (2 * $footer-whitespace-height);
+  padding-top: $footer-whitespace-height;
+}
+
+.extralinks .column {
+  float: left;
+  list-style-type: none;
+  width: 150px;
+}
+
+.extralinks .column a {
+  color: inherit;
+  text-decoration: none;
 }
 
 $socialmedia-icon-size: 44px;
@@ -61,14 +83,14 @@ $socialmedia-icon-spacing: 4px;
 
 .socialmedia {
   float: right;
-  margin-top: 50px;
+  margin-top: 65px;
   margin-right: 40px;
 }
 
-.socialmedia ul {
+.socialmedia ul  {
   list-style-type: none;
   width: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 5 + 20;
-  /*height: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 2 + 20;*/
+  margin-top: 0;
 }
 
 .socialmedia li, .socialmedia a {
