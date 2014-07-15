@@ -38,7 +38,30 @@ html {
   display: block;
 }
 
-.content {
+.breadcrumbs {
+  list-style-type: none;
+
+  li {
+    display: inline;
+    
+    a {
+      font-size: 0.8em;
+      color: inherit;
+      text-decoration: none;
+      padding: 3px;
+    }
+  }
+  li:before {
+    content: "\00BB";
+  }
+}
+
+.breadcrumbs, .breadcrumbs li {
+  padding: 0;
+  margin: 0;
+}
+
+.content, .breadcrumbs {
   width: 788px;
   margin: 0 auto;
   text-align: justify;

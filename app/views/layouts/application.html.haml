@@ -11,6 +11,12 @@
       %area{shape: 'rect', coords: '251,0,413,31', href: cms_url('Why Insects'), alt: 'Why Insects'}
       %area{shape: 'rect', coords: '414,0,528,31', href: cms_url('Connect'), alt: 'Connect'}
       %area{shape: 'rect', coords: '529,0,677,31', href: cms_url('Shop Online'), alt: 'Shop Online'}
+    - unless @cms_page.ancestors.empty?
+      %ul.breadcrumbs
+        - @cms_page.ancestors.reverse.each do |page|
+          %li
+            %a{href: page.url}
+              = page.label.downcase
     .content
       = yield
     .footerinfo
