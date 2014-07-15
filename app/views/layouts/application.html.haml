@@ -2,7 +2,7 @@
 %html
   %head
     = stylesheet_link_tag 'application'
-    %link{rel:'icon', type: 'image/x-icon', href: root_url + 'favicon.ico' }
+    = favicon_link_tag '/favicon.ico'
   %body
     %a.header{href: cms_index_url }
     %img.headerlinksmap{:src => image_url('headerlinks80ppi.png'), :usemap => 'headerlinksmap'}
@@ -25,25 +25,25 @@
       .socialmedia
         %ul
           %li
-            %a.facebook{href: 'http://www.facebook.com/EcotoneFoods'}
+            %a.facebook{href: 'http://www.facebook.com/EcotoneFoods', target:'_facebook'}
           %li
-            %a.twitter{href: 'http://www.twitter.com/EcotoneFoods'}
+            %a.twitter{href: 'http://www.twitter.com/EcotoneFoods', target:'_twitter'}
           %li
-            %a.instagram{href: 'http://www.instagram.com/EcotoneFoods'}
+            %a.instagram{href: 'http://www.instagram.com/EcotoneFoods', target:'_instagram'}
           %li
-            %a.pinterest{href: 'http://www.pinterest.com/EcotoneFoods'}
+            %a.pinterest{href: 'http://www.pinterest.com/EcotoneFoods', target:'_pinterest'}
           %li
-            %a.linkedin{href: 'http://www.linkedin.com/EcotoneFoods'}
+            %a.linkedin{href: 'http://www.linkedin.com/EcotoneFoods', target:'_linkedin'}
           %li
-            %a.youtube{href: 'http://www.youtube.com/EcotoneFoods'}
+            %a.youtube{href: 'http://www.youtube.com/EcotoneFoods', target:'_youtube'}
           %li
-            %a.googleplus{href: 'http://www.googleplus.com/EcotoneFoods'}
+            %a.googleplus{href: 'http://www.googleplus.com/EcotoneFoods', target:'_googleplus'}
           %li
-            %a.tumblr{href: 'http://www.tumblr.com/EcotoneFoods'}
+            %a.tumblr{href: 'http://www.tumblr.com/EcotoneFoods', target:'_tumblr'}
           %li
-            %a.skype{href: 'http://www.skype.com/EcotoneFoods'}
+            %a.skype{href: 'http://www.skype.com/EcotoneFoods', target:'_skype'}
           %li
-            %a.vimeo{href: 'http://www.vimeo.com/EcotoneFoods'}
+            %a.vimeo{href: 'http://www.vimeo.com/EcotoneFoods', target:'_vimeo'}
       .extralinks
         .column
           %li
