@@ -13,7 +13,7 @@
       %area{shape: 'rect', coords: '529,0,677,31', href: cms_url('Shop Online'), alt: 'Shop Online'}
     - unless @cms_page.ancestors.empty?
       %ul.breadcrumbs
-        - @cms_page.ancestors.reverse.each do |page|
+        - (@cms_page.ancestors.reverse + [@cms_page]).each do |page|
           %li
             %a{href: page.url}
               = page.label.downcase
