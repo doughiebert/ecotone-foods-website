@@ -104,6 +104,12 @@ $footer-whitespace-height: 54px;
 $socialmedia-icon-size: 44px;
 $socialmedia-icon-spacing: 4px;
 
+.bio-portrait {
+  float: left;
+  clear: left;
+  padding: 0 15px 15px 0;
+}
+
 .socialmedia {
   float: right;
   margin-top: 65px;
@@ -121,10 +127,6 @@ $socialmedia-icon-spacing: 4px;
   padding: $socialmedia-icon-spacing;  
   height: $socialmedia-icon-size;
   width: $socialmedia-icon-size;
-}
-
-.socialmedia a {
-  
 }
 
 .facebook { @include image-background('socialmediaicons/facebook80ppi.png') }

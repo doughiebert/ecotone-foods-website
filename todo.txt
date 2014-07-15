@@ -1,0 +1,7 @@
+todo:
+- contact us form
+- review
+- email w/ ecotonefoods.com domain
+- dropdown menus (populated from CMS)
+- three button layout with links to subpages
+- cart/checkout
