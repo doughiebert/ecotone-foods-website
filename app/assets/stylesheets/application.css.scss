@@ -27,7 +27,7 @@ html {
 }
 
 .header {
-  @include image-background('header280ppi.png');
+  @include image-background('header.png');
   display: block;
   height: 250px;
   width: 100%;
@@ -70,14 +70,14 @@ $footer-height: 248px;
 $footer-whitespace-height: 56px;
 
 .footer {
-  @include image-background('footer280ppi.png');
+  @include image-background('footer.png');
   height: $footer-height;
   width: 1102px;
   margin: auto auto;
 }
 
 .extralinks {
-  width: 430px;
+  width: 420px;
   float: right;
   height: $footer-height - (2 * $footer-whitespace-height);
   padding-top: $footer-whitespace-height;
@@ -94,7 +94,7 @@ $footer-whitespace-height: 56px;
   text-decoration: none;
 }
 
-$socialmedia-icon-size: 44px;
+$socialmedia-icon-size: 60px;
 $socialmedia-icon-spacing: 4px;
 
 .bio-portrait {
@@ -105,13 +105,13 @@ $socialmedia-icon-spacing: 4px;
 
 .socialmedia {
   float: right;
-  margin-top: 65px;
-  margin-right: 40px;
+  margin-top: 84px;
+  margin-right: 0px;
 }
 
 .socialmedia ul  {
   list-style-type: none;
-  width: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 5 + 20;
+  width: ($socialmedia-icon-size + 2 * $socialmedia-icon-spacing) * 5;
   margin-top: 0;
 }
 
@@ -122,14 +122,18 @@ $socialmedia-icon-spacing: 4px;
   width: $socialmedia-icon-size;
 }
 
-.facebook { @include image-background('socialmediaicons/facebook80ppi.png') }
-.twitter { @include image-background('socialmediaicons/twitter80ppi.png') }
-.instagram { @include image-background('socialmediaicons/instagram80ppi.png') }
-.pinterest { @include image-background('socialmediaicons/pinterest80ppi.png') }
-.linkedin { @include image-background('socialmediaicons/linkedin80ppi.png') }
-.youtube { @include image-background('socialmediaicons/youtube80ppi.png') }
-.googleplus { @include image-background('socialmediaicons/googleplus80ppi.png') }
-.tumblr { @include image-background('socialmediaicons/tumblr80ppi.png') }
-.skype { @include image-background('socialmediaicons/skype80ppi.png') }
-.vimeo { @include image-background('socialmediaicons/vimeo80ppi.png') }
+.copyright {
+  padding: 8px;
+  text-align: right;
+}
+
+.facebook { @include image-background('socialmediaicons/facebook1.png') }
+.twitter { @include image-background('socialmediaicons/twitter1.png') }
+.instagram { @include image-background('socialmediaicons/insta1.png') }
+.vimeo { @include image-background('socialmediaicons/vimeo1.png') }
+
+.facebook:hover { @include image-background('socialmediaicons/facebook2.png') }
+.twitter:hover { @include image-background('socialmediaicons/twitter2.png') }
+.instagram:hover { @include image-background('socialmediaicons/insta2.png') }
+.vimeo:hover { @include image-background('socialmediaicons/vimeo2.png') }
 
