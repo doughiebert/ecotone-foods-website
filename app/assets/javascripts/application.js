@@ -1,15 +1,12 @@
 require(['jquery'], function($){ 
   $(document).ready(function() {
-    var toggle = function(hovering) {
+    var changeImage = function(srcKey) {
       return function() {
-        var origSrcKey = 'original-src';
-        var $this = $(this);
-        if(typeof $this.data(origSrcKey) === 'undefined') {
-          $this.data(origSrcKey, $this.get(0).src);
-        }
-        $this.attr('src', hovering ? $this.data(origSrcKey).replace('1', '2') : $this.data(origSrcKey));
+        $(this).attr('src', $(this).attr(srcKey));
       }
     };
-    $('nav img').on('mouseenter', toggle(true)).on('mouseleave', toggle(false));
+    $('nav img')
+      .on('mouseenter', changeImage('data:hover-src'))
+      .on('mouseleave', changeImage('data:regular-src'));
   });
 });
