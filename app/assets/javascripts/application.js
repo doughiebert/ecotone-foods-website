@@ -1,16 +1,15 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+require(['jquery'], function($){ 
+  $(document).ready(function() {
+    var toggle = function(hovering) {
+      return function() {
+        var origSrcKey = 'original-src';
+        var $this = $(this);
+        if(typeof $this.data(origSrcKey) === 'undefined') {
+          $this.data(origSrcKey, $this.get(0).src);
+        }
+        $this.attr('src', hovering ? $this.data(origSrcKey).replace('1', '2') : $this.data(origSrcKey));
+      }
+    };
+    $('nav img').on('mouseenter', toggle(true)).on('mouseleave', toggle(false));
+  });
+});

@@ -2,16 +2,74 @@
 %html
   %head
     = stylesheet_link_tag 'application'
+    = requirejs_include_tag 'application'
     = favicon_link_tag '/favicon.ico'
   %body
     %a.header{href: cms_index_url }
-    %img.headerlinksmap{:src => image_url('headerlinks80ppi.png'), :usemap => 'headerlinksmap'}
-    %map{:name => 'headerlinksmap'}
-      %area{shape: 'rect', coords: '0,0,125,31',   href: cms_url('About Us'), alt: 'About Us'}
-      %area{shape: 'rect', coords: '126,0,250,31', href: cms_url('Products'), alt: 'Products'}
-      %area{shape: 'rect', coords: '251,0,413,31', href: cms_url('Why Insects'), alt: 'Why Insects'}
-      %area{shape: 'rect', coords: '414,0,528,31', href: cms_url('Connect'), alt: 'Connect'}
-      %area{shape: 'rect', coords: '529,0,677,31', href: cms_url('Shop Online'), alt: 'Shop Online'}
+    %nav
+      %ul
+        %li
+          %a{href: cms_url('About Us')}
+            = image_tag 'nav/aboutus1.png'
+          %ul
+            %li
+              %a{href: cms_url('The Company')}
+                = image_tag 'nav/company1.png'
+            %li
+              %a{href: cms_url('Meet the Crew')}
+                = image_tag 'nav/crew1.png'
+            %li
+              %a{href: cms_url('Kickstarter')}
+                = image_tag 'nav/kickstarter1.png'
+            %li
+              %a{href: cms_url('FAQ')}
+                = image_tag 'nav/faq1.png'
+        %li
+          %a{href: cms_url('Why Insects')}
+            = image_tag 'nav/insects1.png'
+          %ul
+            %li
+              %a{href: cms_url('Economic Benefits')}
+                = image_tag 'nav/eco1.png'
+            %li
+              %a{href: cms_url('Environmental Benefits')}
+                = image_tag 'nav/enviro1.png'
+            %li
+              %a{href: cms_url('Nutritional Benefits')}
+                = image_tag 'nav/nutri1.png'
+        %li
+          %a{href: cms_url('Contact Us')}
+            = image_tag 'nav/connect1.png'
+          %ul
+            %li
+              %a{href: cms_url('Contact Us')}
+                = image_tag 'nav/contactus1.png'
+            %li
+              %a{href: cms_url('Review Us')}
+                = image_tag 'nav/reviewus1.png'
+        %li
+          %a{href: cms_url('Shop Online')}
+            = image_tag 'nav/shop1.png'
+          %ul
+            %li
+              %a{href: cms_url('Online Store')}
+                = image_tag 'nav/onlinestore1.png'
+            %li
+              %a{href: cms_url('Wholesale Inquiries')}
+                = image_tag 'nav/wholesale1.png'
+            %li
+              %a{href: cms_url('Store Locator')}
+                = image_tag 'nav/locator1.png'
+        %li
+          %a{href: cms_url('Pre-order')}
+            = image_tag 'nav/preorder1.png'
+        %li
+          %a{href: cms_url('Cart')}
+            = image_tag 'nav/cart1.png'
+        %li
+          %a{href: cms_url('Checkout')}
+            = image_tag 'nav/checkout1.png'
+                
     - unless @cms_page.ancestors.empty?
       %ul.breadcrumbs
         - (@cms_page.ancestors.reverse + [@cms_page]).each do |page|
