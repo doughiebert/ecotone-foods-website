@@ -1,0 +1,52 @@
+nav {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      position: relative;
+      margin-right: -4px;
+      ul {
+        display: none;
+        position: absolute;
+        top: 36px;
+        left: 0;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        li {
+          display: block;
+          margin-top: -4px;
+        }
+      }
+    }
+    li:hover ul {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    li > a > img.hover {
+      display: none;
+      visibility: none;
+    }
+    li > a > img.regular {
+      display: block;
+      visibility: visible;
+    }
+    li:hover > a > img.hover {
+      display: block;
+      visibility: visible;
+    }
+    li:hover > a > img.regular {
+      display: none;
+      visibility: none;
+    }
+  }
+  a, img, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+}

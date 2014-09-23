@@ -10,13 +10,7 @@ module ApplicationHelper
   end
   
   def hover_image_url(src)
-    regular_image_name = src + '1.png'
-    regular_asset_path = image_url(regular_image_name)
-    hover_asset_path = image_url(src + '2.png')
-    image_tag(regular_image_name,
-      'data:regular-src' => regular_asset_path,
-      'data:hover-src' => hover_asset_path,
-      'class' => 'hover-image'
-    ).html_safe
+    tags = image_tag(src + '1.png', 'class' => 'regular') + image_tag(src + '2.png', 'class' => 'hover')
+    tags.html_safe 
   end
 end
