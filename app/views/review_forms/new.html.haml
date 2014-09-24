@@ -1,0 +1,47 @@
+%header 
+  Review Us
+
+= form_for @review_form do |f|
+  - if @review_form.errors.any?
+    %div.error_explanation
+      #{pluralize(@review_form.errors.count, "error")} found with your message:
+      %ul
+        - @review_form.errors.full_messages.each do |msg|
+          %li=msg
+  
+  %table.form
+    %tr
+      %td{colspan: 2, style: 'text-align: right'}
+        * indicates required
+    %tr
+      %td
+        %label
+          Full Name *
+      %td
+        = f.text_field :name, size: 30
+    %tr
+      %td
+        %label
+          Email Address *
+      %td
+        = f.text_field :email, size: 30
+    %tr
+      %td
+        %label
+          Rating *
+      %td
+        %div.rating
+          - 5.downto(1).each do |rating|
+            %span{class: (@review_form.rating == rating.to_s ? 'checked' : '')}
+              = f.radio_button :rating, rating
+              = f.label "rating_#{rating}", '&#9733;'.html_safe
+    %tr
+      %td
+        %label
+          Your Message *
+      %td
+        = f.text_area :message, size: '60x6'
+        
+    %tr
+      %td
+        = f.submit 'Send Review'

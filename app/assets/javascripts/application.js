@@ -1,5 +1,9 @@
 require(['jquery'], function($){ 
   $(document).ready(function() {
-    // presumably there will be code here someday
+    //$(".rating input:radio").attr("checked", false);
+    $('.rating input').click(function () {
+      $(".rating span").removeClass('checked');
+      $(this).closest('span').addClass('checked');
+    });
   });
 });
