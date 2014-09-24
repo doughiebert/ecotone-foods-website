@@ -13,4 +13,22 @@ module ApplicationHelper
     tags = image_tag(src + '1.png', 'class' => 'regular') + image_tag(src + '2.png', 'class' => 'hover')
     tags.html_safe 
   end
+  
+  # { :label => :url }
+  def breadcrumbs
+    if @cms_page # in CMS
+      breadcrumbs_from_pages(@cms_page.ancestors.reverse + [@cms_page])
+    else # TODO
+      {}
+    end
+  end
+  
+  private
+  
+  def breadcrumbs_from_pages(pages)
+    pages.inject({}) do |crumbs, page|
+      crumbs[page.label.downcase] = page.url
+      crumbs
+    end
+  end
 end

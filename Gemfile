@@ -33,6 +33,8 @@ gem "haml-rails"
 gem 'comfortable_mexican_sofa', '~> 1.12.0'
 gem 'aws-sdk', '~> 1.5.7'
 gem 'requirejs-rails'
+gem 'validates_phone_number', '~> 2.0.1'
+gem 'valid_email'
 
 # for Heroku deploys
 gem 'rails_12factor', group: :production

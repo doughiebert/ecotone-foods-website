@@ -1,0 +1,43 @@
+%header 
+  Contact Us
+
+= form_for @contact_form do |f|
+  - if @contact_form.errors.any?
+    %div.error_explanation
+      #{pluralize(@contact_form.errors.count, "error")} found with your message:
+      %ul
+        - @contact_form.errors.full_messages.each do |msg|
+          %li=msg
+  
+  %table.form
+    %tr
+      %td{colspan: 2, style: 'text-align: right'}
+        * indicates required
+    %tr
+      %td
+        %label
+          Full Name *
+      %td
+        = f.text_field :name, size: 30
+    %tr
+      %td
+        %label
+          Email Address *
+      %td
+        = f.text_field :email, size: 30
+    %tr
+      %td
+        %label
+          Telephone Number
+      %td
+        = f.text_field :phone_number, length: 12
+    %tr
+      %td
+        %label
+          Your Message *
+      %td
+        = f.text_area :message, size: '60x6'
+        
+    %tr
+      %td
+        = f.submit 'Submit'

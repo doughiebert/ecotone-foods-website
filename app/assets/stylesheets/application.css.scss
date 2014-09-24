@@ -33,6 +33,13 @@ html {
   width: 100%;
 }
 
+header {
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
 .breadcrumbs {
   list-style-type: none;
   li, a {
@@ -64,6 +71,25 @@ html {
   width: 788px;
   margin: 0 auto;
   text-align: justify;
+}
+
+.error_explanation {
+  color: red;
+}
+
+.field_with_errors input {
+  border: 2px solid red;
+}
+
+.notice {
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.form { 
+  border-spacing: 20px;
+  border-collapse: separate;
 }
 
 $footer-height: 248px;

@@ -5,7 +5,7 @@
     = requirejs_include_tag 'application'
     = favicon_link_tag '/favicon.ico'
   %body
-    %a.header{href: cms_index_url }
+    %a.header{id: 'header', href: cms_index_url }
     %nav
       %ul
         %li
@@ -16,7 +16,7 @@
               %a{href: cms_url('The Company')}
                 = hover_image_url 'nav/company'
             %li
-              %a{href: cms_url('Meet the Crew')}
+              %a{href: cms_url('Meet The Crew')}
                 = hover_image_url 'nav/crew'
             %li
               %a{href: cms_url('Kickstarter')}
@@ -42,7 +42,7 @@
             = hover_image_url 'nav/connect'
           %ul
             %li
-              %a{href: cms_url('Contact Us')}
+              %a{href: new_contact_forms_path}
                 = hover_image_url 'nav/contactus'
             %li
               %a{href: cms_url('Review Us')}
@@ -69,13 +69,17 @@
         %li
           %a{href: cms_url('Checkout')}
             = hover_image_url 'nav/checkout'
-                
-    - unless @cms_page.ancestors.empty?
+         
+    - if breadcrumbs.size > 1
       %ul.breadcrumbs
-        - (@cms_page.ancestors.reverse + [@cms_page]).each do |page|
+        - breadcrumbs.each do |label, url|
           %li
-            %a{href: page.url}
-              = page.label.downcase
+            %a{href: url }
+              = label
+
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: name
+
     .content
       = yield
     .footer
@@ -100,7 +104,7 @@
           / %li
           /   %a.skype{href: 'http://www.skype.com/EcotoneFoods', target:'_skype'}
           %li
-            %a.vimeo{href: 'http://www.vimeo.com/EcotoneFoods', target:'_vimeo'}
+            %a.vimeo{href: 'https://vimeo.com/user27992234', target:'_vimeo'}
         .copyright
           &copy;#{Time.now.year} Ecotone Foods&trade; All Rights Reserved
       .extralinks
